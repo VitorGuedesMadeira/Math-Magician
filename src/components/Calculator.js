@@ -2,11 +2,15 @@
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
+// function Calculator(props) {}
 function Calculator() {
   const [state, setState] = useState({ total: null, next: null, operation: null });
 
   const handleClick = (event) => {
-    setState(calculate(useState, event.target.textContent));
+    setState((prevState) => {
+      console.log(prevState);
+      return ({ ...prevState, ...calculate(prevState, event.target.textContent) });
+    });
   };
 
   return (
