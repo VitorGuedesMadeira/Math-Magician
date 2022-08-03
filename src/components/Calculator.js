@@ -1,8 +1,6 @@
-/* eslint-disable react/prefer-stateless-function */
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
-// function Calculator(props) {}
 function Calculator() {
   const [state, setState] = useState({ total: null, next: null, operation: null });
 
