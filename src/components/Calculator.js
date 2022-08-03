@@ -5,10 +5,7 @@ function Calculator() {
   const [state, setState] = useState({ total: null, next: null, operation: null });
 
   const handleClick = (event) => {
-    setState((prevState) => {
-      console.log(prevState);
-      return ({ ...prevState, ...calculate(prevState, event.target.textContent) });
-    });
+    setState((prevState) => ({ ...prevState, ...calculate(prevState, event.target.textContent) }));
   };
 
   return (
