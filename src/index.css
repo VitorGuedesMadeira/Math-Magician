@@ -5,37 +5,47 @@
   text-decoration: none;
 }
 
-.nav-container {
-  background-color: rgb(0, 0, 0, 0.9);
-  height: 60px;
+.main-container {
+  background-color: rgb(36, 36, 36);
   display: flex;
   justify-content: space-around;
-  color: white;
-  align-items: center;
-}
-
-.main-container {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: calc(100vh - 120px);
   width: 100%;
+  gap: 10%;
+  color: white;
+  padding: 10%;
 }
 
 .footer-container {
   background-color: rgb(0, 0, 0, 0.9);
-  height: 60px;
-}
-
-.nav-ul {
-  display: flex;
-  gap: 50px;
-  list-style-type: none;
-}
-
-.nav-ul a {
   color: white;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.navigation {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  height: 60px;
+  gap: 30px;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
 }
 
 .calculator {
@@ -43,6 +53,7 @@
   grid-template-columns: repeat(4, 1fr);
   width: 350px;
   gap: 5px;
+  color: white;
 }
 
 .btns {
@@ -86,4 +97,29 @@
 
 .operators:hover {
   background-color: rgb(188, 122, 0);
+}
+
+.home {
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: calc(100vh - 120px);
+  width: 100%;
+  color: white;
+  gap: 5%;
+  padding: 10%;
+}
+
+.quote {
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+  width: 100%;
+  color: white;
+  gap: 5%;
+  padding: 10%;
 }

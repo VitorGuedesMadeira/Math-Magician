@@ -1,14 +1,20 @@
-function Navigation() {
-  return (
-    <div className="nav-container">
-      <div className="logo">MATH MAGICIAN</div>
-      <ul className="nav-ul">
-        <li><a href="https://www.google.com/">HOME</a></li>
-        <li><a href="https://www.google.com/">CALCULATOR</a></li>
-        <li><a href="https://www.google.com/">QUOTE</a></li>
-      </ul>
-    </div>
-  );
-}
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default Navigation;
+const Navbar = () => (
+  <nav className="navigation">
+    <span>Math Magician</span>
+    <ul>
+      <li>
+        <Link to="/" className="links">Home</Link>
+      </li>
+      <li>
+        <Link to="/Calculator" className="links">Calculator</Link>
+      </li>
+      <li>
+        <Link to="/Quote" className="links">Quote</Link>
+      </li>
+    </ul>
+  </nav>
+);
+export default Navbar;
