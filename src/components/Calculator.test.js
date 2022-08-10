@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import { fireEvent, render, screen } from '@testing-library/react';
 import Calculator from './Calculator';
 
@@ -22,35 +23,35 @@ describe('footer component', () => {
 });
 
 describe('Calculator tests', () => {
-    test('Renders Calculator component', () => {
-      const tree = render(<Calculator />)
-      expect(tree).toMatchSnapshot();
-    });
+  test('Renders Calculator component', () => {
+    const tree = render(<Calculator />);
+    expect(tree).toMatchSnapshot();
+  });
 
-    test('Simulating user interaction', () => {
-        render(<Calculator />);
-        const displayNumber = document.querySelector('.display');
-        const key7 = screen.getByText('7');
-        const key8 = screen.getByText('8');
-        fireEvent.click(key7);
-        fireEvent.click(key8);
-        expect(displayNumber.textContent).toBe('78');
-      });
+  test('Simulating user interaction', () => {
+    render(<Calculator />);
+    const displayNumber = document.querySelector('.display');
+    const key7 = screen.getByText('7');
+    const key8 = screen.getByText('8');
+    fireEvent.click(key7);
+    fireEvent.click(key8);
+    expect(displayNumber.textContent).toBe('78');
+  });
 
-      test('Simulating user interaction', () => {
-        render(<Calculator />);
-        
-        const displayNumber = document.querySelector('.display');
-        const key3 = screen.getByText('3');
-        const key7 = screen.getByText('7');
-        const keyTimes = screen.getByText('x');
-        const keyEquals = screen.getByText('=');
+  test('Simulating user interaction', () => {
+    render(<Calculator />);
 
-        fireEvent.click(key3);
-        fireEvent.click(keyTimes);
-        fireEvent.click(key7);
-        fireEvent.click(keyEquals);
+    const displayNumber = document.querySelector('.display');
+    const key3 = screen.getByText('3');
+    const key7 = screen.getByText('7');
+    const keyTimes = screen.getByText('x');
+    const keyEquals = screen.getByText('=');
 
-        expect(displayNumber.textContent).toBe('21');
-      });
+    fireEvent.click(key3);
+    fireEvent.click(keyTimes);
+    fireEvent.click(key7);
+    fireEvent.click(keyEquals);
+
+    expect(displayNumber.textContent).toBe('21');
+  });
 });

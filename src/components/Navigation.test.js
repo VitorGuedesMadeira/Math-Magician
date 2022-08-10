@@ -1,14 +1,14 @@
 import { render } from '@testing-library/react';
-import Navbar from "./Navigation";
 import { BrowserRouter as Router } from 'react-router-dom';
+import Navbar from './Navigation';
 
 describe('Navbar tests', () => {
-    test('Renders Navbar component', () => {
-      const tree = render(
+  test('Renders Navbar component', () => {
+    const tree = render(
       <Router>
         <Navbar />
-      </Router>
-      )
-      expect(tree).toMatchSnapshot();
-    });
+      </Router>,
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });

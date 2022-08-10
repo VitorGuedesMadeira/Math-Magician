@@ -36,7 +36,7 @@ Object {
           <li>
             <a
               activeclassname="active-link"
-              class="links home"
+              class="links"
               href="/Quote"
             >
               Quote
@@ -113,7 +113,7 @@ Object {
         <li>
           <a
             activeclassname="active-link"
-            class="links home"
+            class="links"
             href="/Quote"
           >
             Quote
