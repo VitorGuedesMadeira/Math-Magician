@@ -42,7 +42,7 @@ const Navbar = () => {
           <NavLink
             to="Quote"
             activeClassName="active-link"
-            className="links"
+            className="links home"
             onClick={() => closeMenu()}
           >
             Quote
