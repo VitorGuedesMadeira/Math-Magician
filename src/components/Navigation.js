@@ -1,19 +1,62 @@
-/* eslint-disable react/prefer-stateless-function */
-import React from 'react';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { MdClose } from 'react-icons/md';
+import { FiMenu } from 'react-icons/fi';
 
-class Navigation extends React.Component {
-  render() {
-    return (
-      <div className="nav-container">
-        <div className="logo">MATH MAGICIAN</div>
-        <ul className="nav-ul">
-          <li><a href="https://www.google.com/">HOME</a></li>
-          <li><a href="https://www.google.com/">CALCULATOR</a></li>
-          <li><a href="https://www.google.com/">QUOTE</a></li>
-        </ul>
-      </div>
-    );
-  }
-}
+const Navbar = () => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
-export default Navigation;
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen);
+  };
+
+  const closeMenu = () => {
+    setNavbarOpen(false);
+  };
+
+  return (
+    <nav className="navigation navBar">
+      <span>Math Magician</span>
+      <ul className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
+        <li>
+          <NavLink
+            to="/"
+            activeClassName="active-link"
+            className="links"
+            onClick={() => closeMenu()}
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="Calculator"
+            activeClassName="active-link"
+            className="links"
+            onClick={() => closeMenu()}
+          >
+            Calculator
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="Quote"
+            activeClassName="active-link"
+            className="links"
+            onClick={() => closeMenu()}
+          >
+            Quote
+          </NavLink>
+        </li>
+      </ul>
+      <button type="button" onClick={handleToggle}>
+        {navbarOpen ? (
+          <MdClose style={{ color: '#fff', width: '40px', height: '40px' }} />
+        ) : (
+          <FiMenu style={{ color: '#7b7b7b', width: '40px', height: '40px' }} />
+        )}
+      </button>
+    </nav>
+  );
+};
+export default Navbar;

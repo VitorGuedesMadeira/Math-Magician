@@ -5,43 +5,60 @@
   text-decoration: none;
 }
 
-.nav-container {
-  background-color: rgb(0, 0, 0, 0.9);
-  height: 60px;
+.main-container {
+  background-color: rgb(36, 36, 36);
   display: flex;
   justify-content: space-around;
-  color: white;
-  align-items: center;
-}
-
-.main-container {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: calc(100vh - 120px);
   width: 100%;
+  gap: 10%;
+  color: white;
+  padding: 50px;
+  overflow: hidden;
 }
 
 .footer-container {
   background-color: rgb(0, 0, 0, 0.9);
-  height: 60px;
-}
-
-.nav-ul {
-  display: flex;
-  gap: 50px;
-  list-style-type: none;
-}
-
-.nav-ul a {
   color: white;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navBar button {
+  display: none;
+}
+
+.navigation {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  height: 60px;
+  gap: 30px;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
 }
 
 .calculator {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 350px;
+  max-width: 350px;
+  min-width: 324px;
+  gap: 5px;
+  color: white;
 }
 
 .btns {
@@ -49,6 +66,7 @@
   background-color: lightgrey;
   line-height: 50px;
   border: 1px solid grey;
+  border-radius: 15px;
 }
 
 .display {
@@ -58,13 +76,16 @@
   text-align: right;
   color: white;
   border: 1px solid grey;
-  height: 50px;
+  padding: 0 25px;
+  overflow: hidden;
+  border-radius: 15px;
 }
 
 .zero {
   grid-column: span 2;
   background-color: lightgrey;
   border: 1px solid grey;
+  border-radius: 15px;
 }
 
 .operators {
@@ -72,6 +93,7 @@
   grid-column: span 1;
   line-height: 50px;
   border: 1px solid grey;
+  border-radius: 15px;
 }
 
 .hover:hover {
@@ -80,4 +102,78 @@
 
 .operators:hover {
   background-color: rgb(188, 122, 0);
+}
+
+.home {
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: calc(100vh - 120px);
+  width: 100%;
+  color: white;
+  gap: 5%;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.quote {
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+  width: 100%;
+  color: white;
+  gap: 5%;
+  padding: 50px;
+  overflow: hidden;
+}
+
+@media all and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .navBar {
+    position: relative;
+  }
+
+  .navBar button {
+    display: block;
+    z-index: 10;
+    cursor: pointer;
+    filter: invert(100%);
+    border: none;
+    background-color: transparent;
+  }
+
+  .navigation ul {
+    display: none;
+  }
+
+  .menuNav {
+    overflow-y: scroll;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    background: darkcyan;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 0;
+    overflow: hidden;
+    z-index: 9;
+  }
+
+  .menuNav.showMenu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
