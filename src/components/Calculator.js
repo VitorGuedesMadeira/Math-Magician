@@ -12,7 +12,7 @@ function Calculator() {
     <section className="main-container">
       <h2>Let&apos;s do some math!</h2>
       <div className="calculator">
-        <div className="display">{state.next || state.total || 0}</div>
+        <div className="display">{state.next || state.operation || state.total || 0}</div>
         {/* display calculation */}
 
         <button onClick={handleClick} className="btns hover" type="button">AC</button>
