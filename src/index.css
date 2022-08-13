@@ -136,11 +136,11 @@
 }
 
 .hover:hover {
-  background-color: rgb(122, 158, 206);
+  background-color: rgb(160, 196, 243);
 }
 
 .operators:hover {
-  background-color: rgb(141, 173, 215);
+  background-color: rgb(160, 196, 243);
 }
 
 .home {
@@ -154,11 +154,11 @@
   color: white;
   gap: 5%;
   padding: 50px;
-  overflow: hidden;
   font-size: 1.2em;
   text-shadow:
     0 0 5px white,
     0 0 25px rgb(0, 129, 242);
+  overflow-y: auto;
 }
 
 .home p {
@@ -185,6 +185,12 @@
 }
 
 @media all and (max-width: 768px) {
+  .home {
+    background-size: contain;
+    height: auto;
+    gap: 30px;
+  }
+
   .navBar {
     position: relative;
   }
