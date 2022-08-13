@@ -1,15 +1,7 @@
 /* eslint-disable no-unused-expressions */
 
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Footer from './Footer';
-
-describe('footer component', () => {
-  test('testing if theres a 2022 text in the footer', () => {
-    render(<Footer />);
-    const footerText = screen.getByText('2022');
-    expect(footerText).toBeInTheDocument;
-  });
-});
 
 describe('Footer tests', () => {
   test('Renders Footer component', () => {
