@@ -8,11 +8,18 @@ function Calculator() {
     setState((prevState) => ({ ...prevState, ...calculate(prevState, event.target.textContent) }));
   };
 
+  const isStateNull = () => !state.total && !state.next && !state.operation;
+
+  const displayCalculation = () => {
+    if (state.operation) return `${state.total} ${state.operation} ${state.next || ''}`;
+    return state.next || state.total;
+  };
+
   return (
     <section className="main-container">
       <h2>Let&apos;s do some math!</h2>
       <div className="calculator">
-        <div className="display">{state.next || state.operation || state.total || 0}</div>
+        <div className="display">{isStateNull() ? '0' : displayCalculation()}</div>
         {/* display calculation */}
 
         <button onClick={handleClick} className="btns hover" type="button">AC</button>
