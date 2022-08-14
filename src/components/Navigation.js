@@ -16,7 +16,11 @@ const Navbar = () => {
 
   return (
     <nav className="navigation navBar">
-      <span>Math Magician</span>
+      <span>
+        <a className="logo" href="/">
+          Math Magician
+        </a>
+      </span>
       <ul className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
         <li>
           <NavLink

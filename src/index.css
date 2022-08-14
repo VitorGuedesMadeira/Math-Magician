@@ -63,9 +63,17 @@
   list-style: none;
 }
 
+.logo {
+  color: white;
+}
+
 .links {
   color: white;
   text-decoration: none;
+}
+
+.links:hover {
+  border-bottom: 1px solid white;
 }
 
 .calculator {
@@ -137,10 +145,12 @@
 
 .hover:hover {
   background-color: rgb(160, 196, 243);
+  transform: scale(1.2);
 }
 
 .operators:hover {
   background-color: rgb(160, 196, 243);
+  transform: scale(1.2);
 }
 
 .home {
