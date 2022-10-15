@@ -5,7 +5,7 @@
 - Functional Math Calculator - Microverse
 
 ## Acces link
-> on progress...
+> [click here for live demo](https://mathmagician-vitorguedes.netlify.app/)
 
 ## Tech ⌘⇧
 - **HTML & CSS best practices:** Correct use of tags, elements, properties and syntax.
